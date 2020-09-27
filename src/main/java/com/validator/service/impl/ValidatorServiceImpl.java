@@ -15,12 +15,21 @@ public class ValidatorServiceImpl implements ValidatorService {
 	public ResponseDTO countValidEmails(List<String> emails) {
 		Set<String> dataSet = new HashSet<String>();
 		int count = 0;
+		// Two string buffers are initialized to store the domain and username
 		StringBuffer domain = new StringBuffer();
 		StringBuffer userName = new StringBuffer();
+
 		for (String email : emails) {
+
+			// The stringbuffers are cleared after each iteration
 			domain.setLength(0);
 			userName.setLength(0);
 			int end = email.length() - 1;
+
+			/*
+			 * The string is scanned from the end until the @ symbol is met. The value in
+			 */
+
 			while (end > 0) {
 				char currentChar = email.charAt(end);
 				if (currentChar == '@') {
@@ -31,6 +40,7 @@ public class ValidatorServiceImpl implements ValidatorService {
 				end--;
 			}
 
+			// the end variable would be the end index scanning from the start
 			int start = 0;
 
 			while (start < end) {
@@ -42,7 +52,6 @@ public class ValidatorServiceImpl implements ValidatorService {
 				}
 				start++;
 			}
-
 			String validEmail = userName.append(domain.reverse()).toString();
 			if (!dataSet.contains(validEmail) && validEmail.length() > 0) {
 				dataSet.add(validEmail);

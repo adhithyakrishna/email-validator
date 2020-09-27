@@ -2,6 +2,9 @@ package com.validator.model;
 
 import java.util.List;
 
+/*
+ * Model to receive the input from the controller.
+ */
 public class InputModel {
 
 	List<String> input;
