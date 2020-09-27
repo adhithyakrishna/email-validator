@@ -11,6 +11,14 @@ import com.validator.model.ResponseModel;
 import com.validator.service.ValidatorService;
 import com.validator.shared.ResponseDTO;
 
+/*
+ * Controller class whose responsibilities involve handling http calls
+ * 
+ * ResponseDTO - DTO is a data transfer object that carries data across the processes.
+ * 
+ * ResponseModel - Model that has to be returned through the API. We do not send DTO as a response to follow the separation of concerns property. 
+ */
+
 @RestController
 public class RequestRestController {
 
