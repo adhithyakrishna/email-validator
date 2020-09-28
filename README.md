@@ -29,7 +29,7 @@ The project has been configured to run in multiple ways.
 
 1) Open command prompt navigate to the cloned folder.
 
-2) In the command prompt, type the command `maven clean install`. This will install all the dependencies as well as run the Junit test cases.
+2) In the command prompt, type the command `mvn clean install`. This will install all the dependencies as well as run the Junit test cases.
 
 3) In the command prompt, type the command `mvn package` to package the content as a jar file.
 
@@ -46,7 +46,7 @@ I have attached my jar file which can be found under [releases](https://github.c
 
 1) Import the project into the eclipse or any other ide that is capable of running a java application.
 
-2) In the command prompt, type the command `maven clean install`. This will install all the dependencies as well as run the Junit test cases.
+2) In the command prompt, type the command `mvn clean install`. This will install all the dependencies as well as run the Junit test cases.
 
 3) Embedded tomcat is added as one of the dependency. So, this project can be run as a normal java application.
 
